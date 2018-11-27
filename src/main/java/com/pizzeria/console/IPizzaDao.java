@@ -1,17 +1,13 @@
 package com.pizzeria.console;
 
 import java.util.List;
-
-import com.pizzeria.exception.DeletePizzaException;
-import com.pizzeria.exception.SavePizzaException;
-import com.pizzeria.exception.UpDatePizzaException;
-
 public interface IPizzaDao {
+	
 
 	 List<Pizza> findAllPizzas();
-	 void saveNewPizza(Pizza pizza) throws SavePizzaException;
-	 void updatePizza(String codePizza, Pizza pizza) throws UpDatePizzaException;
-	 void deletePizza(String codePizza) throws DeletePizzaException;
+	 void saveNewPizza(Pizza pizza);
+	 void updatePizza(String codePizza, Pizza pizza);
+	 void deletePizza(String codePizza);
 	 Pizza findPizzaByCode(String codePizza);
 	 boolean isPizzaExists(String codePizza);
 	
